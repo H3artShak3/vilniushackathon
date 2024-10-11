@@ -10,3 +10,9 @@ from vilniushackathon import urls
 def home(request):
     return HttpResponse("Hello, Django!")
 
+def index(request):
+    return render(request, "index.html")
+
+def map(request):
+    return render(request, "map.html")
+

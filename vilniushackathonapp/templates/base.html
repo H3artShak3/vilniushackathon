@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Recycling Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #388E3C;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #2E7D32;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        Waste Recycling Community
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Pagrindinis</a></li>
+            <li><a href="{% url 'map' %}">Žemėlapis</a></li>
+            <li><a href="#services">Apie</a></li>
+            <li><a href="#contact">Kontaktai</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">{% block content %}{% endblock %}</div>
+
+</body>
+</html>
