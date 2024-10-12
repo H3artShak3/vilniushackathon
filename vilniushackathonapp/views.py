@@ -9,12 +9,24 @@ from vilniushackathon import urls
 # For API environment keys
 from django.conf import settings
 
+# For redirection
+from django.shortcuts import render, redirect
+
 
 def home(request):
     return HttpResponse("Hello, Django!")
 
 def index(request):
     return render(request, "index.html")
+
+def find_container(request):
+    if request.method == 'POST':
+        address = request.POST.get('address')
+        # Logic to find green containers near the provided address
+        # You can pass this data to the template or redirect
+        return render(request, 'results.html', {'address': address})
+    else:
+        return redirect('index')
 
 def map(request):
     context = {
