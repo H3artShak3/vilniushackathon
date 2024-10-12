@@ -19,6 +19,9 @@ def home(request):
 def index(request):
     return render(request, "index.html")
 
+def apie(request):
+    return render(request, "apie.html")
+
 def find_container(request):
     if request.method == 'POST':
         address = request.POST.get('address')
