@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render
 
 # Create your views here.
@@ -21,3 +22,18 @@ def map(request):
     }
     return render(request, "map.html")
 
+# Taking data from Vilnius Open data and display as a table
+def greenwaste(request):
+    # URL of the JSON API
+    url = 'https://gis.vplanas.lt/arcgis/rest/services/Interaktyvus_zemelapis/Miesto_tvarkymas/MapServer/87/query?where=1%3D1&f=pjson&outFields=*'
+
+    #Fetch data from the API
+    response = requests.get(url)
+    data = response.json()
+
+    # Extract the relevant fields
+    features = data.get('features', [])
+    data_list = [feature['attributes'] for feature in features]  # Extract 'attributes' from each feature
+
+    # Pass the data to the template
+    return render(request, 'greenwaste.html', {'data_list': data_list})
