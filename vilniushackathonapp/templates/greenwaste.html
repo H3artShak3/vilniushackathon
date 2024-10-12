@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- templates/greenwaste.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Waste Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Green Waste Data from Vilnius Open Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>OBJECTID</th>
+                <th>NUMERIS</th>
+                <th>TIPAS</th>
+                <th>ADRESAS</th>
+                <th>PASTABA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data_list %}
+            <tr>
+                <td>{{ item.OBJECTID }}</td>
+                <td>{{ item.NUMERIS }}</td>
+                <td>{{ item.TIPAS }}</td>
+                <td>{{ item.ADRESAS }}</td>
+                <td>{{ item.PASTABA }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+{% endblock %}
