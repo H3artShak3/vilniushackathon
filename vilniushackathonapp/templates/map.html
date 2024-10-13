@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +23,150 @@
             // Create a map instance in the 'map' div
             var map = new google.maps.Map(document.getElementById('map'), options);
             var noPoi = [
-{
-    featureType: "poi",
-    stylers: [
-      { visibility: "off" }
-    ]
-  }
-];
+        {
+            featureType: "poi",
+            stylers: [
+              { visibility: "off" }
+            ]
+          }
+        ];
+
+        // Custom icon for the marker
+            var customIcon = {
+                url: '{% static 'images/green-trash-can-icon.png' %}',  // Custom marker icon URL
+                scaledSize: new google.maps.Size(25, 25)  // Resize the icon
+            };
+
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6995198, lng: 25.2784438},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7201374, lng: 25.2510918},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6960865, lng: 25.2337787},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.68154, lng: 25.2541079},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6907491, lng: 25.2626759},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6893669, lng: 25.2775749},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7296785, lng: 25.2238959},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7061478, lng: 25.2155464},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7206565, lng: 25.2114659},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.71729, lng: 25.2391641},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.713081, lng: 25.31412},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7041496, lng: 25.2233093},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.7128181, lng: 25.3123342},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+            // Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6965003, lng: 25.3057968},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });// Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6935319, lng: 25.3020683},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });// Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6725541, lng: 25.273589},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });// Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6671804, lng: 25.2949642},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });// Add a custom marker at Vilnius
+            var marker = new google.maps.Marker({
+                position: {lat: 54.6740812, lng: 25.297887},  // Vilnius coordinates
+                map: map,
+                title: 'Vilnius, Lithuania',  // Hover title for the marker
+                icon: customIcon  // Use the custom icon
+            });
+
+            // Optional: Add an info window that pops up when clicking the marker
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<h3>Vilnius</h3><p>The capital of Lithuania</p>'  // Custom info window content
+            });
 
 map.setOptions({styles: noPoi});
 
