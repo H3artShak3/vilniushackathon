@@ -20,6 +20,11 @@ GOOGLE_MAPS_API_KEY = config('GOOGLE_MAPS_API_KEY')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+STATIC_URL = '/static/'
+
+# In case you have a custom static directory outside the app, include this line:
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
